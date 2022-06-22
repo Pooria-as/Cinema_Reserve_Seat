@@ -1,0 +1,120 @@
+:root {
+    --success: #5cb85c;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ 
+}
+
+
+body {
+    background-color: #111111ff;
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.MovieContainer label {
+    font-size: 1.3rem;
+  
+    color: white;
+    margin-right: 1rem;
+}
+
+.MovieContainer select {
+    padding: 0.5rem 2rem;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    /* appearance: none; */
+    /* margin: 3rem 2rem; */
+}
+
+.ShowCaseContainer {
+    margin: 2rem;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ShowCaseContainer ul {
+    list-style-type: none;
+    margin: 1rem 2rem;
+
+}
+.ShowCaseContainer li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+.ShowCaseContainer small{
+    margin-left: 0.7rem;
+    font-size: 1rem;
+}
+
+/* .ShowCaseContainer */
+
+.seat {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    margin: 0.3rem;
+    transition: all .9s;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.seat:not(.occupied):hover{
+    background-color: var(--success);
+    cursor: pointer;
+    transform: scale(1.4);
+}
+
+.seat:nth-of-type(2)
+{
+    margin-right:3rem;
+}
+.seat:nth-last-of-type(3)
+{
+    margin-right:3rem;
+}
+
+
+.row {
+    display: flex;
+}
+
+.User_Seat {
+    margin: 1rem 0;
+
+}
+
+.selected {
+    background-color: var(--success);
+}
+
+.occupied {
+    background-color: gray;
+}
+
+.screen {
+    background-color: #ffffff;
+    width: 324px;
+    height: 200px;
+    margin-bottom: 3rem;
+    border: 10px;
+    box-shadow: rgba(255, 249, 249, 0.663) 0px 5px 15px;
+    transform: rotateX(-30deg);    
+}
+.SeatContainer{
+    perspective: 1000px;
+}
+
+/* we use prespective for 3d vision */
